@@ -16,7 +16,7 @@ The tab-separated `info.csv` currently contains 496 links. Original audio is
 saved as `<video_id>/source.<extension>` without trimming or resampling.
 The downloader uses three retries after the initial attempt, validates the
 entire audio before accepting it, and skips valid downloads when restarted.
-Connections use IPv4 because some media hosts reject Jupiter's IPv6 route.
+Connections use IPv4, which recovered a failed request during Jupiter setup.
 Unavailable IDs and errors are printed at the end, with a nonzero exit status
 if any download failed. Capture stdout and stderr to retain a run log.
 

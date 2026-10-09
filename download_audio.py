@@ -77,7 +77,7 @@ def download(row: dict[str, str], output: Path, retries: int, cookies: Path | No
             "retries": 0, "fragment_retries": 0, "extractor_retries": 0,
             "file_access_retries": 0, "socket_timeout": 30,
             "quiet": True, "no_warnings": False, "noprogress": True,
-            # Some YouTube media hosts reject Jupiter's IPv6 route with 403.
+            # Prefer IPv4, which recovered a failed request during Jupiter setup.
             "source_address": "0.0.0.0",
         }
         if node:
